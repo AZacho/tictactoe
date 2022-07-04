@@ -2,6 +2,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.player-panel{
+    display: flex;
+    font-size: 32px;
+    margin-bottom: 86px;
+}
+
+.player-panel div {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.player-panel img {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+}
+
+.player-inactive {
+    opacity: 0.25;
 }
 
 tr {
@@ -51,4 +76,60 @@ tr td:last-child {
 
 .d-none {
     display: none;
+}
+
+.horizontal-line {
+    height: 10px;
+    background-color: rgba(0,0,0,0.5);
+    width: 300px;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 2;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.game-over {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 3;
+}    
+
+.restart-btn {
+    position: absolute;
+    z-index: 3;
+    background-color: #200f7e;
+    color: white;
+    width: 203px;
+    height: 105px;
+    font-size: 27px;
+    bottom: 148px;
+    border: 0;
+}
+
+.restart-btn:hover {
+    cursor: pointer;
+    background-color: #3d25c6;
+}
+
+.new-game-btn {
+    position: absolute;
+    z-index: 0;
+    background-color: #200f7e;
+    color: white;
+    width: 203px;
+    height: 39px;
+    font-size: 27px;
+    top: 281px;
+    border: 0;
+}
+
+.new-game-btn:hover {
+    cursor: pointer;
+    background-color: #3d25c6;
 }
